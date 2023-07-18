@@ -81,7 +81,8 @@ function prettifyComments() {
 function resetDocument() {
   const body = DocumentApp.getActiveDocument().getBody();
   const text = body.editAsText();
-  text.setBold(false);
+
+  // text.setBold(false); Do not unbold text so we can use internal formatting in the GDoc
   text.setFontFamily('Arial');
   text.setForegroundColor("#000000");
   text.setBackgroundColor("#ffffff");
